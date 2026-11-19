@@ -69,6 +69,9 @@ kernel_args = [
   "-enable_kprintf_spam",
   "-noprogress",
   "rd=ufsroot0",
+  # Local change: keep the Android userdata intact and mount the iOS HFS+ root
+  # from the 64 GiB GPT partition named "darwin" (SM8150 dual-boot lab).
+  "ufsroot=darwin",
   "unentitled_ios_sim_launch=1",
   "ignition_level=1",
   "wdt_test=no_user_checkin",
